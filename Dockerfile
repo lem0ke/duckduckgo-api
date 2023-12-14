@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 暴露端口号 8000
-EXPOSE 8000
+EXPOSE 80
 
 # 在容器中运行 Gunicorn 服务器
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:80", "app:app"]
